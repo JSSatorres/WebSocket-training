@@ -78,10 +78,10 @@ export default function Home() {
                   <div className="message-content">
                     <p>{messageContent.message}</p>
                   </div>
-                  {/* <div className="message-meta">
+                  <div className="message-meta">
                     <p id="time">{messageContent.time}</p>
-                    <p id="author">{messageContent.author}</p>
-                  </div> */}
+                    {/* <p id="author">{messageContent.author}</p> */}
+                  </div>
                 </div>
               </div>
             );
