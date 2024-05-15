@@ -6,9 +6,10 @@ import io from "socket.io-client";
 const socket = io("http://localhost:3001");
 
 type Message = {
-  // room: string;
+  room?: string;
   time: string,
   message: string,
+  author: string
 }
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
     if (currentMessage !== "") {
       const messageData = {
         // room: room,
-        // author: username,
+        author: username,
         message: currentMessage,
         time:
           new Date(Date.now()).getHours() +
@@ -80,7 +81,7 @@ export default function Home() {
                   </div>
                   <div className="message-meta">
                     <p id="time">{messageContent.time}</p>
-                    {/* <p id="author">{messageContent.author}</p> */}
+                     <p id="author">{messageContent.author}</p> 
                   </div>
                 </div>
               </div>
