@@ -16,6 +16,8 @@ export default function Home() {
 
   const [currentMessage, setCurrentMessage] = useState("");
   const [messageList, setMessageList] = useState<Message[]>([]);
+  const [username, setUsername] = useState("");
+  const [room, setRoom] = useState("");
   
   const sendMessage = async () => {  
     console.log(currentMessage);
@@ -51,6 +53,21 @@ export default function Home() {
   
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <section className="flex flex-row items-center space-between">
+        <input
+          type="text"
+          placeholder="User name..."
+          className="p-2 border border-gray-300 rounded-md"
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <button
+          className="p-2 mt-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+          onClick={sendMessage}
+        >
+          Login
+        </button>
+      
+      </section> 
       <section className="flex flex-row items-center space-between">
         <input
           type="text"
