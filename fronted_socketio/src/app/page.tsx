@@ -47,6 +47,7 @@ export default function Home() {
     // return () => {
     //   second
     // }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [socket])
   
   console.log(messageList);
