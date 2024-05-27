@@ -37,6 +37,7 @@ export default function Home() {
     }
     
   }
+  //TODO: have to send the room by socket.io
 
   useEffect(() => {
     socket.on("receive_message", (data) => {      
@@ -92,6 +93,7 @@ export default function Home() {
                 key={index}
                 className="message"
                 // id={username === messageContent.author ? "you" : "other"}
+                 // id={username === messageContent.author ? "you" : "other"}
               >
                 <div>
                   <div className="message-content">
