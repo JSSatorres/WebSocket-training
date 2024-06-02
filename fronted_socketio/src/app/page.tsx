@@ -23,7 +23,7 @@ export default function Home() {
     console.log(currentMessage);
     if (currentMessage !== "") {
       const messageData = {
-        // room: room,
+        room: room,
         author: username,
         message: currentMessage,
         time:
@@ -83,7 +83,7 @@ export default function Home() {
         >
           Send message
         </button>
-        {/* <h1>{messageReceived}</h1> */}
+        <h1>{messageReceived}</h1> 
       </section>    
       <div className="chat-body">
         <div className="message-container">
@@ -92,8 +92,7 @@ export default function Home() {
               <div
                 key={index}
                 className="message"
-                // id={username === messageContent.author ? "you" : "other"}
-                 // id={username === messageContent.author ? "you" : "other"}
+                id={username === messageContent.author ? "you" : "other"}
               >
                 <div>
                   <div className="message-content">
@@ -101,7 +100,7 @@ export default function Home() {
                   </div>
                   <div className="message-meta">
                     <p id="time">{messageContent.time}</p>
-                     <p id="author">{messageContent.author}</p> 
+                    <p id="author">{messageContent.author}</p> 
                   </div>
                 </div>
               </div>
