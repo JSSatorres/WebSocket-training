@@ -83,7 +83,7 @@ export default function Home() {
         >
           Send message
         </button>
-        <h1>{messageReceived}</h1> 
+        {/* <h1>{messageReceived}</h1>  */}
       </section>    
       <div className="chat-body">
         <div className="message-container">
